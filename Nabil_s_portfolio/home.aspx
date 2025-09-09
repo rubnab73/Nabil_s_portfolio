@@ -78,7 +78,8 @@
                         <h2>
                             <asp:Label ID="lblFullName" runat="server" /></h2>
                         <p>
-                            <asp:Label ID="lblDescription" runat="server" /></p>
+                            <asp:Label ID="lblDescription" runat="server" />
+                        </p>
 
                         <div class="about-info-cards">
                             <div class="info-card">
@@ -107,7 +108,183 @@
             </div>
         </section>
 
+        <!-- Resume Section -->
+        <section id="resume" class="resume-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Resume</h2>
+                </div>
 
+                <div class="resume-grid">
+                    <div class="resume-item">
+                        <span class="date">2024-Present</span>
+                        <h3>Web Development Lab</h3>
+                        <span class="position">CSE Course</span>
+                        <ul>
+                            <li>Developed dynamic web applications using HTML, CSS, JavaScript, and ASP.NET.</li>
+                            <li>Integrated SQL Server databases with server-side logic.</li>
+                            <li>Implemented session management and user authentication systems.</li>
+                        </ul>
+                    </div>
+
+                    <div class="resume-item">
+                        <span class="date">2024-Present</span>
+                        <h3>Database Management</h3>
+                        <span class="position">CSE Course</span>
+                        <ul>
+                            <li>Designed and implemented SQL Server database schemas.</li>
+                            <li>Created stored procedures and database optimization techniques.</li>
+                            <li>Developed data-driven web applications with CRUD operations.</li>
+                        </ul>
+                    </div>
+
+                    <div class="resume-item">
+                        <span class="date">2022-Present</span>
+                        <h3>B.Sc. in Computer Science & Engineering</h3>
+                        <span class="position">University</span>
+                        <p>Focus: Web Development, Database Systems, Software Engineering</p>
+                    </div>
+
+                    <div class="resume-item">
+                        <span class="date">2020-2022</span>
+                        <h3>Higher Secondary Certificate</h3>
+                        <span class="position">Science Group</span>
+                        <p>Focus: Mathematics, Physics, Chemistry, Computer Science</p>
+                    </div>
+                </div>
+
+                <div class="text-center" style="margin-top: 3rem;">
+                    <a href="#contact" class="btn btn-primary">Request Resume</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Skills</h2>
+                    <p>Technical skills and technologies I work with</p>
+                </div>
+                <asp:Panel ID="pnlAdminSkills" runat="server" Visible="false" class="admin-controls">
+                    <a href="AddSkill.aspx" class="admin-btn">+ Add New Skill</a>
+                </asp:Panel>
+                <div class="skills-grid">
+                    <asp:Repeater ID="rptSkills" runat="server">
+                        <ItemTemplate>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name"><%# Eval("SkillName") %></span>
+                                    <span class="skill-percentage"><%# Eval("Percentage") %>%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style='width: <%# Eval("Percentage") %>%;'></div>
+                                </div>
+                                <asp:Panel ID="pnlAdminSkillButtons" runat="server" Visible="false" class="admin-controls">
+                                    <a href='EditSkill.aspx?Id=<%# Eval("Id") %>' class="admin-btn">Edit</a>
+                                    <a href='DeleteSkill.aspx?Id=<%# Eval("Id") %>' class="admin-btn" onclick="return confirm('Are you sure?');">Delete</a>
+                                </asp:Panel>
+                            </div>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Projects</h2>
+                    <p>Some of my recent work and projects</p>
+                </div>
+                <asp:Panel ID="pnlAdminProjectsAdd" runat="server" Visible="false" class="admin-controls">
+                    <a href="AddProject.aspx" class="admin-btn">+ Add New Project</a>
+                </asp:Panel>
+                <div class="projects-grid">
+                    <asp:Repeater ID="rptProjects" runat="server">
+                        <ItemTemplate>
+                            <div class="project-card">
+                                <img src='<%# ResolveUrl(Eval("ImageUrl").ToString()) %>' alt='<%# Eval("Title") %>' class="project-image" />
+                                <div class="project-content">
+                                    <h3 class="project-title"><%# Eval("Title") %></h3>
+                                    <p class="project-description"><%# Eval("Description") %></p>
+                                    <a href='<%# Eval("ProjectLink") %>' target="_blank" class="project-link">View Project</a>
+                                    <asp:Panel ID="pnlAdminProjectButtons" runat="server" Visible="false" class="admin-controls">
+                                        <a href='EditProject.aspx?Id=<%# Eval("Id") %>' class="admin-btn">Edit</a>
+                                        <a href='DeleteProject.aspx?Id=<%# Eval("Id") %>' class="admin-btn" onclick="return confirm('Are you sure?');">Delete</a>
+                                    </asp:Panel>
+                                </div>
+                            </div>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Contact Me</h2>
+                    <p>Get in touch with me for any opportunities or collaborations</p>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3 class="contact-title">Location</h3>
+                        <p class="contact-info">Remote</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3 class="contact-title">Phone</h3>
+                        <p class="contact-info"><a href="tel://0101010101">+0 123 456 789</a></p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3 class="contact-title">Email</h3>
+                        <p class="contact-info"><a href="mailto:hello@example.com">nabil@hello.com</a></p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3 class="contact-title">Resume</h3>
+                        <p class="contact-info"><a href="#contact">Contact for Resume</a></p>
+                    </div>
+                </div>
+                <div class="text-center" style="margin-top: 3rem;">
+                    <a href="mailto:hello@example.com" class="btn btn-primary">Email Me</a>
+                </div>
+                <div class="social-links">
+                    <a href="#" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" target="_blank" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="mailto:hello@example.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer-section">
+            <p>&copy;
+                <script>document.write(new Date().getFullYear());</script>
+                All rights reserved </p>
+        </footer>
 
         <div>
         </div>
