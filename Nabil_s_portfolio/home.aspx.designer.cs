@@ -11,7 +11,7 @@ namespace Nabil_s_portfolio
 {
 
 
-    public partial class WebForm1
+    public partial class home
     {
 
         /// <summary>
