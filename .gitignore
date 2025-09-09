@@ -1,0 +1,38 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.cache
+*.log
+*.pdb
+*.dbmdl
+*.opendb
+*.VC.db
+
+# Build results
+bin/
+obj/
+Debug/
+Release/
+
+# Rider IDE
+.idea/
+
+# OS generated
+Thumbs.db
+.DS_Store
+
+# NuGet packages
+*.nupkg
+packages/
+
+# Resharper
+_ReSharper*/
+*.DotSettings.user
+
+# Others
+*.exe
+*.dll
+*.class
+*.jar
+*.pyc
