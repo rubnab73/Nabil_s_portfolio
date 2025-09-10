@@ -68,7 +68,7 @@
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="AdminLogin.aspx">Admin</a></li>
+                    <li><a href="login_admin.aspx">Admin</a></li>
                 </ul>
             </div>
         </nav>
@@ -253,7 +253,7 @@
                 </div>
 
                 <asp:Panel ID="pnlAdminAbout" runat="server" Visible="false" CssClass="admin-controls">
-                    <a href="EditAbout.aspx?Id=<%# Eval("Id") %>" class="admin-btn">Edit About</a>
+                    <a href="edit_about.aspx?Id=<%# Eval("Id") %>" class="admin-btn">Edit About</a>
                 </asp:Panel>
             </div>
         </div>
@@ -323,7 +323,7 @@
                     <p>Technical skills and technologies I work with</p>
                 </div>
                 <asp:Panel ID="pnlAdminSkills" runat="server" Visible="false" class="admin-controls">
-                    <a href="AddSkill.aspx" class="admin-btn">+ Add New Skill</a>
+                    <a href="add_skill.aspx" class="admin-btn">+ Add New Skill</a>
                 </asp:Panel>
                 <div class="skills-grid">
                     <asp:Repeater ID="rptSkills" runat="server">
@@ -337,8 +337,8 @@
                                     <div class="skill-progress" style='width:<%# Eval("Percentage") %>%;'></div>
                                 </div>
                                 <asp:Panel ID="pnlAdminSkillButtons" runat="server" Visible="false" class="admin-controls">
-                                    <a href='EditSkill.aspx?Id=<%# Eval("Id") %>' class="admin-btn">Edit</a>
-                                    <a href='DeleteSkill.aspx?Id=<%# Eval("Id") %>' class="admin-btn" onclick="return confirm('Are you sure?');">Delete</a>
+                                    <a href='edit_skill.aspx?Id=<%# Eval("Id") %>' class="admin-btn">Edit</a>
+                                    <a href='delete_skill.aspx?Id=<%# Eval("Id") %>' class="admin-btn" onclick="return confirm('Are you sure?');">Delete</a>
                                 </asp:Panel>
                             </div>
                         </ItemTemplate>
@@ -355,7 +355,7 @@
                     <p>Some of my recent work and projects</p>
                 </div>
                 <asp:Panel ID="pnlAdminProjectsAdd" runat="server" Visible="false" class="admin-controls">
-                    <a href="AddProject.aspx" class="admin-btn">+ Add New Project</a>
+                    <a href="add_project.aspx" class="admin-btn">+ Add New Project</a>
                 </asp:Panel>
                 <div class="projects-grid">
                     <asp:Repeater ID="rptProjects" runat="server">
@@ -367,8 +367,8 @@
                                     <p class="project-description"><%# Eval("Description") %></p>
                                     <a href='<%# Eval("ProjectLink") %>' target="_blank" class="project-link">View Project</a>
                                     <asp:Panel ID="pnlAdminProjectButtons" runat="server" Visible="false" class="admin-controls">
-                                        <a href='EditProject.aspx?Id=<%# Eval("Id") %>' class="admin-btn">Edit</a>
-                                        <a href='DeleteProject.aspx?Id=<%# Eval("Id") %>' class="admin-btn" onclick="return confirm('Are you sure?');">Delete</a>
+                                        <a href='edit_project.aspx?Id=<%# Eval("Id") %>' class="admin-btn">Edit</a>
+                                        <a href='delete_project.aspx?Id=<%# Eval("Id") %>' class="admin-btn" onclick="return confirm('Are you sure?');">Delete</a>
                                     </asp:Panel>
                                 </div>
                             </div>
@@ -387,7 +387,7 @@
                 </div>
                 <div class="contact-grid">
                     <div class="contact-card">
-                        <div class="contact-icon">meh
+                        <div class="contact-icon">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <h3 class="contact-title">Location</h3>
