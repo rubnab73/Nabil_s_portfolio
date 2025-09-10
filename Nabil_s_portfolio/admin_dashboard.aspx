@@ -144,6 +144,54 @@
             th, td { padding: 0.7rem; font-size: 0.85rem; }
             .btn-edit, .btn-view, .btn-delete { padding: 0.3rem 0.6rem; font-size: 0.8rem; }
         }
+
+        /* Skills Section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.skill-card {
+    background: var(--bg-secondary);
+    border-radius: 0.75rem;
+    padding: 1rem 1.2rem;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+.progress-bar {
+    height: 10px;
+    background: var(--border-color);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+        .progress-fill {
+            height: 100%;
+            background: var(--gradient-primary);
+            border-radius: inherit;
+            transition: width 0.4s ease-in-out;
+        }
+
+.action-buttons {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
     </style>
 </head>
 <body>
@@ -191,36 +239,30 @@
                 </asp:Repeater>
             </div>
 
-            <!-- Skills Section -->
-            <h3 class="section-title">Skills Section</h3>
-            <a href="add_skill.aspx" class="add-new">+ Add New</a>
-            <div class="table-wrapper">
-                <asp:Repeater ID="rptSkills" runat="server">
-                    <HeaderTemplate>
-                        <table>
-                            <tr>
-                                <th>Skill Name</th>
-                                <th>Percentage</th>
-                                <th>Actions</th>
-                            </tr>
-                    </HeaderTemplate>
-                    <ItemTemplate>
-                        <tr>
-                            <td><%# Eval("SkillName") %></td>
-                            <td><%# Eval("Percentage") %>%</td>
-                            <td>
-                                <div class="action-buttons">
-                                    <a class="btn-edit" href='edit_skill.aspx?Id=<%# Eval("Id") %>'>Edit</a>
-                                    <a class="btn-delete" href='delete_skill.aspx?Id=<%# Eval("Id") %>' onclick="return confirm('Are you sure to delete?');">Delete</a>
-                                </div>
-                            </td>
-                        </tr>
-                    </ItemTemplate>
-                    <FooterTemplate>
-                        </table>
-                    </FooterTemplate>
-                </asp:Repeater>
+<!-- Skills Section -->
+<h3 class="section-title">Skills Section</h3>
+<a href="add_skill.aspx" class="add-new">+ Add New</a>
+
+<div class="skills-grid">
+    <asp:Repeater ID="rptSkills" runat="server">
+        <ItemTemplate>
+            <div class="skill-card">
+                <div class="skill-header">
+                    <span class="skill-name"><%# Eval("SkillName") %></span>
+                    <span class="skill-percentage"><%# Eval("Percentage") %>%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width:<%# Eval("Percentage") %>%"></div>
+                </div>
+                <div class="action-buttons">
+                    <a class="btn-edit" href='edit_skill.aspx?Id=<%# Eval("Id") %>'>Edit</a>
+                    <a class="btn-delete" href='delete_skill.aspx?Id=<%# Eval("Id") %>' onclick="return confirm('Are you sure to delete?');">Delete</a>
+                </div>
             </div>
+        </ItemTemplate>
+    </asp:Repeater>
+</div>
+
 
             <!-- Projects Section -->
             <h3 class="section-title">Projects Section</h3>
