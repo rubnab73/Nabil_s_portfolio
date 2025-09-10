@@ -74,6 +74,7 @@
     <Content Include="Css\style.css" />
     <Content Include="delete_project.aspx" />
     <Content Include="delete_skill.aspx" />
+    <Content Include="edit_about.aspx" />
     <Content Include="edit_project.aspx" />
     <Content Include="edit_skill.aspx" />
     <Content Include="home.aspx" />
@@ -122,6 +123,13 @@
     </Compile>
     <Compile Include="delete_skill.aspx.designer.cs">
       <DependentUpon>delete_skill.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="edit_about.aspx.cs">
+      <DependentUpon>edit_about.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="edit_about.aspx.designer.cs">
+      <DependentUpon>edit_about.aspx</DependentUpon>
     </Compile>
     <Compile Include="edit_project.aspx.cs">
       <DependentUpon>edit_project.aspx</DependentUpon>
