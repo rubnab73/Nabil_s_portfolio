@@ -23,7 +23,7 @@
         }
         h2 {
             text-align: center;
-            color: #3b82f6;
+            color: #8b5cf6;
             margin-bottom: 25px;
             font-size: 26px;
         }
@@ -31,7 +31,7 @@
             font-weight: bold;
             margin-bottom: 8px;
             display: block;
-            color: #3b82f6;
+            color: #8b5cf6;
         }
         input[type="text"], textarea, input[type="file"] {
             width: 100%;
@@ -45,12 +45,12 @@
             transition: border-color 0.2s;
         }
         input:focus, textarea:focus {
-            border-color: #3b82f6;
+            border-color: #8b5cf6;
             outline: none;
         }
         .current-image {
             margin: 10px 0 20px;
-            border: 2px solid #3b82f6;
+            border: 2px solid #8b5cf6;
             border-radius: 8px;
             max-width: 100%;
             display: block;
@@ -62,12 +62,12 @@
             border-radius: 8px;
             font-size: 16px;
             font-weight: bold;
-            background: #3b82f6;
+            background: #8b5cf6;
             color: #111;
             cursor: pointer;
             transition: 0.3s;
         }
-        .btn-save:hover { background: #3b82f6; color: #fff; }
+        .btn-save:hover { background: #8b5cf6; color: #fff; }
         .error { color: red; text-align: center; margin-bottom: 15px; }
     </style>
 </head>

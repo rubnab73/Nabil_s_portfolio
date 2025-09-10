@@ -26,7 +26,7 @@
 
         .edit-container h2 {
             text-align: center;
-            color: #3b82f6;
+            color: #8b5cf6;
             margin-bottom: 30px;
             font-size: 28px;
         }
@@ -35,7 +35,7 @@
             display: block;
             margin-bottom: 6px;
             font-weight: bold;
-            color: #3b82f6;
+            color: #8b5cf6;
         }
 
         input[type="text"], textarea, input[type="file"] {
@@ -57,13 +57,13 @@
         .current-image {
             display: block;
             margin-bottom: 20px;
-            border: 2px solid #3b82f6;
+            border: 2px solid #8b5cf6;
             border-radius: 8px;
             max-width: 100%;
         }
 
         .btn-update {
-            background: #3b82f6;
+            background: #8b5cf6;
             color: #111;
             font-weight: bold;
             border: none;
@@ -76,13 +76,13 @@
         }
 
         .btn-update:hover {
-            background: #e6ac2c;
-            color: #fff;
+            background: #fff;
+            color: black;
         }
 
         /* Optional: add hover effect on inputs */
         input[type="text"]:focus, textarea:focus, input[type="file"]:focus {
-            border-color: #ffbd39;
+            border-color:  #8b5cf6;
             outline: none;
         }
     </style>

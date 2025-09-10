@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Add Project</title>
-    <link rel="stylesheet" href="Css/styles.css" />
+    <link rel="stylesheet" href="Css/style.css" />
     <style>
         .form-container {
             max-width: 500px;
@@ -15,7 +15,7 @@
             color: #fff;
         }
         input, textarea { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: none; }
-        input[type="submit"] { background: #3b82f6; color: #000; font-weight: bold; cursor: pointer; }
+        input[type="submit"] { background: #8b5cf6; color: #000; font-weight: bold; cursor: pointer; }
         input[type="submit"]:hover { background: #fff; }
         .error { color: red; }
     </style>

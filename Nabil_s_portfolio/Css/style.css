@@ -178,9 +178,8 @@ section {
 
 /* ===== Home Section ===== */
 .home-section {
-    background: var(--gradient-secondary);
-    position: relative;
-    overflow: hidden;
+    margin-top: 80px; /* navbar height */
+    padding-top: 150px;
 }
 
     .home-section::before {

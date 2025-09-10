@@ -7,7 +7,6 @@
     <title>Nabil's Portfolio</title>
     <link rel="stylesheet" href="Css/style.css" />
     <style>
-        /* Custom styles for this page */
         .typing-animation {
             display: block;
             font-size: 1.5rem;
@@ -96,25 +95,39 @@
 
 
 <!-- Typing Animation Script -->
+<span id="typing-animation"></span>
+
 <script>
     const typingAnimationElement = document.getElementById('typing-animation');
+    const typingTexts = ['Web Developer', 'Student', 'Programmer', 'App Developer'];
+    let textIndex = 0;
+    let charIndex = 0;
+    let typingForward = true; // true: typing, false: deleting
 
-    const typingTexts = ['Web Developer', 'Student', 'Programmer', 'Tech Enthusiast'];
+    function type() {
+        const currentText = typingTexts[textIndex];
 
-    function playTypingAnimation(text) {
-        for (let i = 0; i < text.length; i++) {
-            setTimeout(() => {
-                typingAnimationElement.textContent += text[i];
-            }, i * 200);
+        if (typingForward) {
+            typingAnimationElement.textContent += currentText[charIndex];
+            charIndex++;
+            if (charIndex === currentText.length) {
+                typingForward = false;
+                setTimeout(type, 1000); // pause at full text
+                return;
+            }
+        } else {
+            typingAnimationElement.textContent = currentText.slice(0, charIndex - 1);
+            charIndex--;
+            if (charIndex === 0) {
+                typingForward = true;
+                textIndex = (textIndex + 1) % typingTexts.length;
+            }
         }
 
-        setTimeout(() => {
-            typingAnimationElement.textContent = '';
-            playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-        }, text.length * 200);
+        setTimeout(type, 200); // typing/deleting speed
     }
 
-    playTypingAnimation(typingTexts[0]);
+    type();
 </script>
 
 <!-- Enhanced JavaScript for better UX -->
@@ -271,41 +284,30 @@
                 </div>
 
                 <div class="resume-grid">
-                    <div class="resume-item">
-                        <span class="date">2024-Present</span>
-                        <h3>Web Development Lab</h3>
-                        <span class="position">CSE Course</span>
-                        <ul>
-                            <li>Developed dynamic web applications using HTML, CSS, JavaScript, and ASP.NET.</li>
-                            <li>Integrated SQL Server databases with server-side logic.</li>
-                            <li>Implemented session management and user authentication systems.</li>
-                        </ul>
-                    </div>
 
                     <div class="resume-item">
-                        <span class="date">2024-Present</span>
-                        <h3>Database Management</h3>
-                        <span class="position">CSE Course</span>
-                        <ul>
-                            <li>Designed and implemented SQL Server database schemas.</li>
-                            <li>Created stored procedures and database optimization techniques.</li>
-                            <li>Developed data-driven web applications with CRUD operations.</li>
-                        </ul>
-                    </div>
-
-                    <div class="resume-item">
-                        <span class="date">2022-Present</span>
-                        <h3>B.Sc. in Computer Science & Engineering</h3>
+                        <span class="date">2021-Present</span>
+                        <h3>BSc in Computer Science and Engineering</h3>
                         <span class="position">University</span>
-                        <p>Focus: Web Development, Database Systems, Software Engineering</p>
+                        <p>Khulna University of Engineering & Technology</p>
                     </div>
 
                     <div class="resume-item">
-                        <span class="date">2020-2022</span>
+                        <span class="date">2019-2021</span>
                         <h3>Higher Secondary Certificate</h3>
                         <span class="position">Science Group</span>
-                        <p>Focus: Mathematics, Physics, Chemistry, Computer Science</p>
+                        <p>Notre Dame College, Dhaka</p>
+                        <p>Grade: GPA 5</p>
                     </div>
+
+                    <div class="resume-item">
+                        <span class="date">2019</span>
+                        <h3>Secondary School Certificate</h3>
+                        <span class="position">School</span>
+                        <p>Motijheel Govt. Boys High School</p>
+                        <p>Grade: GPA 5</p>
+                    </div>
+
                 </div>
 
                 <div class="text-center" style="margin-top: 3rem;">

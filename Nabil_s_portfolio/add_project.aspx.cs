@@ -14,7 +14,7 @@ namespace Nabil_s_portfolio
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["AdminLoggedIn"] == null)
-                Response.Redirect("AdminLogin.aspx");
+                Response.Redirect("login_admin.aspx");
         }
 
         protected void btnSave_Click(object sender, EventArgs e)
@@ -58,7 +58,7 @@ namespace Nabil_s_portfolio
                 return;
             }
 
-            string connStr = ConfigurationManager.ConnectionStrings["PortfolioDB"].ConnectionString;
+            string connStr = ConfigurationManager.ConnectionStrings["nabDB"].ConnectionString;
             using (SqlConnection conn = new SqlConnection(connStr))
             {
                 string query = "INSERT INTO Projects (Title, Description, ImageUrl, ProjectLink) VALUES (@Title, @Description, @ImageUrl, @ProjectLink)";
@@ -72,8 +72,7 @@ namespace Nabil_s_portfolio
                 cmd.ExecuteNonQuery();
             }
 
-            Response.Redirect("AdminDashboard.aspx");
+            Response.Redirect("admin_dashboard.aspx");
         }
     }
 }
-
