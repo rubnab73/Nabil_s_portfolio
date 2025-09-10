@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="Css\style.css" />
     <Content Include="home.aspx" />
+    <Content Include="login_admin.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -78,6 +79,13 @@
     </Compile>
     <Compile Include="home.aspx.designer.cs">
       <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login_admin.aspx.cs">
+      <DependentUpon>login_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login_admin.aspx.designer.cs">
+      <DependentUpon>login_admin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
