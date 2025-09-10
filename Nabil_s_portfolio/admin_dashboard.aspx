@@ -8,8 +8,8 @@
     <style>
         /* ===== Dashboard Layout ===== */
         .dashboard {
-            max-width: 1200px;
-            margin: 100px auto 50px;
+            max-width: 1920px;
+            margin: 10px auto 10px;
             padding: 2rem;
             background: var(--bg-card);
             border: 1px solid var(--border-color);
@@ -129,6 +129,7 @@
             display: flex;
             gap: 0.5rem;
             flex-wrap: wrap;
+            justify-content: flex-end;
         }
 
         /* ===== Responsive ===== */
