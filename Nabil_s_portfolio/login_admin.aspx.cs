@@ -15,7 +15,7 @@ namespace Nabil_s_portfolio
         protected void btnLogin_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text.Trim();
-            string password = txtPassword.Text.Trim();  // For production, hash this
+            string password = txtPassword.Text.Trim();  
 
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
@@ -45,7 +45,7 @@ namespace Nabil_s_portfolio
                         adminCookie.Expires = DateTime.Now.AddDays(7);
                         Response.Cookies.Add(adminCookie);
 
-                        Response.Redirect("AdminDashboard.aspx");
+                        Response.Redirect("admin_dashboard.aspx");
                     }
                     else
                     {
@@ -57,7 +57,7 @@ namespace Nabil_s_portfolio
 
         protected void btnRegister_Click(object sender, EventArgs e)
         {
-            Response.Redirect("AdminRegister.aspx");
+            Response.Redirect("admin_register.aspx");
         }
     }
 }

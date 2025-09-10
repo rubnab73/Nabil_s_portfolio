@@ -11,7 +11,7 @@ namespace Nabil_s_portfolio
 {
 
 
-    public partial class admin_dashboard
+    public partial class edit_skill
     {
 
         /// <summary>
@@ -24,48 +24,40 @@ namespace Nabil_s_portfolio
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// btnLogout control.
+        /// lblError control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLogout;
+        protected global::System.Web.UI.WebControls.Label lblError;
 
         /// <summary>
-        /// lblAdminUser control.
+        /// txtSkillName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAdminUser;
+        protected global::System.Web.UI.WebControls.TextBox txtSkillName;
 
         /// <summary>
-        /// rptAbout control.
+        /// txtPercentage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptAbout;
+        protected global::System.Web.UI.WebControls.TextBox txtPercentage;
 
         /// <summary>
-        /// rptSkills control.
+        /// btnSave control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptSkills;
-
-        /// <summary>
-        /// rptProjects control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptProjects;
+        protected global::System.Web.UI.WebControls.Button btnSave;
     }
 }
+

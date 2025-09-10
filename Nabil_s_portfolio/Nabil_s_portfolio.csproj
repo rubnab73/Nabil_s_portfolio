@@ -67,19 +67,75 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="add_project.aspx" />
+    <Content Include="add_skill.aspx" />
     <Content Include="admin_dashboard.aspx" />
+    <Content Include="admin_register.aspx" />
     <Content Include="Css\style.css" />
+    <Content Include="delete_project.aspx" />
+    <Content Include="delete_skill.aspx" />
+    <Content Include="edit_project.aspx" />
+    <Content Include="edit_skill.aspx" />
     <Content Include="home.aspx" />
     <Content Include="login_admin.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="add_project.aspx.cs">
+      <DependentUpon>add_project.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="add_project.aspx.designer.cs">
+      <DependentUpon>add_project.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="add_skill.aspx.cs">
+      <DependentUpon>add_skill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="add_skill.aspx.designer.cs">
+      <DependentUpon>add_skill.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin_dashboard.aspx.cs">
       <DependentUpon>admin_dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="admin_dashboard.aspx.designer.cs">
       <DependentUpon>admin_dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin_register.aspx.cs">
+      <DependentUpon>admin_register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin_register.aspx.designer.cs">
+      <DependentUpon>admin_register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="delete_project.aspx.cs">
+      <DependentUpon>delete_project.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="delete_project.aspx.designer.cs">
+      <DependentUpon>delete_project.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="delete_skill.aspx.cs">
+      <DependentUpon>delete_skill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="delete_skill.aspx.designer.cs">
+      <DependentUpon>delete_skill.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="edit_project.aspx.cs">
+      <DependentUpon>edit_project.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="edit_project.aspx.designer.cs">
+      <DependentUpon>edit_project.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="edit_skill.aspx.cs">
+      <DependentUpon>edit_skill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="edit_skill.aspx.designer.cs">
+      <DependentUpon>edit_skill.aspx</DependentUpon>
     </Compile>
     <Compile Include="home.aspx.cs">
       <DependentUpon>home.aspx</DependentUpon>
@@ -107,6 +163,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Images\Projects\" />
     <Folder Include="Uploads\" />
   </ItemGroup>
   <PropertyGroup>
